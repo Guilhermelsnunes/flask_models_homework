@@ -6,7 +6,10 @@ from models.customer import customers
 def index():
     return render_template("index.html", title="Toy Store", all_customers=customers )
 
-# @app.route("/orders/<index>")
-#    def index(index):
-#    return render_template("order.html", title="home", orders=orders, index=index_num)
+
+@app.route("/orders/<index>")
+def order(index):
+    index_number=int(index)
+    order=customers[index_number]
+    return render_template("order.html", title="home", customer=order)
 
