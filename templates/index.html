@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title> {{ title }} </title>
+    </head>
+    <body>
+        <h1>Toy Store</h1>
+        {% for customer in all_customers %}
+            <div>
+                <p>
+                    <!-- <a href="">Order Details</a> -->
+                    {{ customer.customer_name }}: 
+                    <b>{{ customer.oder_date }}:</b>
+                    <b>{{ customer.quantity }}:</b>
+                    <b>{{ customer.toy }}:</b>
+                </p>
+            </div>
+            
+        {% endfor %}
+    </body>
+
+</html>
