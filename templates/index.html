@@ -7,7 +7,7 @@
         {% for customer in all_customers %}
             <div>
                 <p>
-                    <!-- <a href="">Order Details</a> -->
+                    <a href="/orders/{{ all_customers.index(customer) }}">Order Details</a>
                     {{ customer.customer_name }}: 
                     <b>{{ customer.order_date }}:</b>
                     <b>{{ customer.quantity }}:</b>
